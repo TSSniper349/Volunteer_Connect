@@ -2,6 +2,10 @@
 
 Volunteer Connect is an innovative web platform that bridges passionate volunteers with organizations in need. The platform simplifies volunteer management by providing a unified hub where both volunteers and organizations can create and update their profiles, join communities, and communicate in real‑time.
 
+[![Email Me](https://img.shields.io/badge/Email-Get_In_Touch-FF4500?style=for-the-badge&logo=gmail&logoColor=white)](mailto:duybao21560@gmail.com)
+[![My Website](https://img.shields.io/badge/Website-Explore-1E90FF?style=for-the-badge&logo=chrome&logoColor=white)](https://www.yourwebsite.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Network-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tssniper349)
+
 ## Overview
 
 Volunteer Connect is designed for two primary user groups:
