@@ -3,7 +3,7 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path');
 
-const CLIENT_ID = '524639070638-hunqbmi6askkv299t2dkho9hvn1fq1o6.apps.googleusercontent.com';
+const CLIENT_ID = '829108637006-ntg3hnof9v3nq540lu8ijasu0c5r7o4q.apps.googleusercontent.com';
 const { OAuth2Client } = require('google-auth-library');
 const client = new OAuth2Client(CLIENT_ID);
 

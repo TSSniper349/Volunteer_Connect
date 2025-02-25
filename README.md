@@ -37,6 +37,59 @@ Volunteer Connect is designed for two primary user groups:
 - **Email Service:** Integrated email services for sending organization updates to member emails.
 - **Frontend:** A responsive and user-friendly interface that allows easy search, filtering, and profile management.
 
+## Screenshots
+
+Take a visual tour of Volunteer Connect through these screenshots:
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/Homepage.png" alt="Login Page" style="width: 100%;">
+    <p align="center"><strong>Home Page</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/SearchOrganization.png" alt="Organization Search & Filter" style="width: 100%;">
+    <p align="center"><strong>Search &amp; Filter Organizations</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/ViewOrganization.png" alt="Organization Profile" style="width: 100%;">
+    <p align="center"><strong>Organization Profile</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/CreateEvent.png" alt="Event Creation" style="width: 100%;">
+    <p align="center"><strong>Event Creation</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/ApplyingShift.png" alt="Shift Management" style="width: 100%;">
+    <p align="center"><strong>Shift Application</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/ViewUpdates.png" alt="Real-Time Notifications" style="width: 100%;">
+    <p align="center"><strong>Real-Time Notifications</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/UserProfile.png" alt="Profile Management" style="width: 100%;">
+    <p align="center"><strong>User Profile Managment</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/PostUpdate.png" alt="Profile Management" style="width: 100%;">
+    <p align="center"><strong>Organization Profile Management</strong></p>
+  </div>
+
+  <div style="flex: 0 0 45%; margin-bottom: 10px;">
+    <img src="screenshots/AdminPage.png" alt="Settings &amp; Modifications" style="width: 100%;">
+    <p align="center"><strong>Administrator Page</strong></p>
+  </div>
+
+</div>
+
 ## Getting Started
 
 ### Prerequisites
