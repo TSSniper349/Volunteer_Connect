@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheets/nav.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/stylesheets/signup.css">
+  <link rel="stylesheet" href="/stylesheets/button.css">
+  <link rel="stylesheet" href="/stylesheets/password_field.css">
+  <script src="javascripts/signUp.js" defer></script>
+  <script src="javascripts/showPassword.js" defer></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <nav>
+    <a href="/" id="web_title">VolunTeer</a>
+  </nav>
+
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" id="user_firstname" placeholder="First Name" required>
+      <input type="text" id="user_lastname" placeholder="Last Name" required>
+      <input type="tel" id="user_phone" placeholder="Phone Number (XXX-XXX-XXX)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+      <input type="email" id="user_email" placeholder="Email" required>
+      <div class="password-wrapper">
+        <input type="password" id="user_password" placeholder="Password" required>
+        <i id="toggle-password" class="fa fa-eye" aria-hidden="true" onclick="showPassword('user_password')"></i>
+      </div>
+      <div class="password-wrapper">
+        <input type="password" id="user_confirmPassword" placeholder="Confirm Password" required>
+        <i id="toggle-password" class="fa fa-eye" aria-hidden="true" onclick="showPassword('user_confirmPassword')"></i>
+      </div>
+      <br>
+      <input type="checkbox" id="orgRegis" onclick="revealForm()" autocomplete="off">
+      <label for="orgRegis">Sign up as organization</label>
+
+      <div id="org-regis-form" style="display: none;">
+        <input type="text" id="org_name" placeholder="Organization Name" required>
+        <input type="number" id="org_abn" placeholder="ABN" required>
+        <input type="number" id="org_address_number" placeholder="Address Number" required>
+        <input type="text" id="org_address_street" placeholder="Street" required>
+        <input type="text" id="org_address_city" placeholder="City" required>
+        <input type="text" id="org_address_state" placeholder="State" required>
+        <input type="number" id="org_address_postcode" placeholder="Postcode" required>
+        <textarea id="org_description" placeholder="Briefly describe your organization" required></textarea>
+
+        <div class="select-btn orgInfo">
+          <span class="btn-text">What's your organisation about?</span>
+          <span class="arrow-dwn">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </div>
+
+        <ul class="list-items"></ul>
+      </div>
+      <br>
+      <input type="checkbox" id="remember" style="margin: 1.2rem 0rem;">
+      <label for="remember">I accept the Terms of Use & Privacy Policy</label>
+      <button type="button" onclick="signUp()">Sign Up</button>
+    </form>
+    <div class="option" style="margin-top: 1rem;">or Login with Social Media</div>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <div id="g_id_onload"
+        data-client_id="524639070638-hunqbmi6askkv299t2dkho9hvn1fq1o6.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="redirect"
+        data-login_uri="/google_login"
+        data-itp_support="true">
+      </div>
+
+      <div class="g_id_signin"
+        data-type="standard"
+        data-shape="rectangular"
+        data-theme="filled_blue"
+        data-text="continue_with"
+        data-size="large"
+        data-logo_alignment="left"
+        data-width="350">
+      </div>
+    </div>
+    <p>Already have an account? <a href="login_page">Login here</a></p>
+  </div>
+
+</body>
+</html>

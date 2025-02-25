@@ -1,0 +1,106 @@
+* {
+  text-align: center;
+}
+
+.body-content {
+  padding-top: 10vh;
+  padding-bottom: 12vh;
+}
+
+.container {
+  width: 350px;
+  height: fit-content;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0, 0.3);
+}
+
+.form-item-email {
+  margin: 0 5px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item-email input {
+  height: 55px;
+  border: 2px solid #e1dede69;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  text-align: left;
+  margin: 0 5px;
+  font-size: larger;
+}
+
+.form-item-password {
+  margin: 5px 5px 0px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item-password input {
+  height: 55px;
+  border: 2px solid #e1dede69;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  text-align: left;
+  margin: 5px 5px;
+  font-size: larger;
+}
+
+p {
+  font-size: 15px;
+}
+
+.container form .input-box{
+  height: 45px;
+  margin-top: 25px;
+  align-content: center;
+  /* position: relative; */
+}
+.container form .input-box input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+
+.container .button{
+  width: 350px;
+  margin: 20px 0;
+  
+}
+.container .input-box input[type="submit"]{
+  background: #fbba50;
+  color: antiquewhite;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container .input-box input[type="submit"]:hover{
+  background: #d88a0c;
+  color: antiquewhite;
+  letter-spacing: 1px;
+
+}
+
+.remember-org-box {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.container .option{
+  font-size: 14px;
+  text-align: center;
+}

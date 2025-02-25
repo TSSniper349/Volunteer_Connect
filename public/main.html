@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>VolunTeer</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/nav.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/search_bar.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/button.css">
+        <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+        <script src="javascripts/nav_bar.js" defer></script>
+        <script src="javascripts/login.js" defer></script>
+        <script src="javascripts/redirecting.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <nav id="nav_bar"></nav>
+        <div id="search_bar">
+            <input class="keyword" type="text" name="keywords" id="keyword" placeholder="Search for organisations...">
+            <button type="button" onclick= "redirect_organisation_list()">Search</button>
+        </div>
+        <div hidden class="box_item" id="organisation_list">
+        </div>
+        <div class="grid">
+            <div class="grid_item">
+                <img src="images/volunteering.jpg" alt="volunteering_img">
+                <h2>Volunteering</h2>
+                <div>Your journey start here! Find an organization to kick off your volunteering experience now.</div>
+                <button type="button" onclick="location.href='/organisation_list';">Learn more</button>
+            </div>
+            <div class="grid_item">
+                <img src="images/volunteer_recruitment.jpg" alt="volunteering_img">
+                <h2>Engage volunteer</h2>
+                <div>Finding volunteers for your organization? Click learn more to start</div>
+                <button type="button" id="learn_more" onclick="location.href='/signup_page';">Learn more</button>
+            </div>
+        </div>
+    </body>
+</html>

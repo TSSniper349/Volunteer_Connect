@@ -1,0 +1,79 @@
+body {
+    text-align:justify;
+}
+
+.content {
+    margin:0px 400px 0px 50px;
+}
+
+.content p{
+    font-size: larger;
+    margin-right: 30%;
+}
+
+aside {
+    width: 35%;
+    padding: 2%;
+    margin-left: 1%;
+    float: right;
+    font-style: italic;
+    font-size: larger;
+}
+
+aside h1 {
+    padding-left: 20px;
+    font-size:x-large;
+}
+
+article{
+    clear:both;
+    padding: 15px;
+}
+
+.location {
+    font-style: italic;
+}
+
+.content {
+    margin: 3%;
+}
+
+.inner_box {
+    width: 100%;
+    height: 235px;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 1px 1px 7px grey;
+    overflow: hidden;
+}
+
+li {
+    color: red;
+}
+
+li p {
+    color: black;
+}
+
+.chosen-container {
+    width: 100%;
+    max-width: 300px;
+}
+
+div.searching{
+    display: inline-block;
+    padding: 1%;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+div.find{
+    padding-bottom: 15px;
+}
+
+img {
+    float: right;
+    width: 10%;
+    height: 10%;
+    margin-left: 2%;
+}

@@ -1,0 +1,30 @@
+.event_title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.event_description {
+    margin-bottom: 1em;
+}
+.event_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.event_details dt {
+    font-weight: bold;
+    width: 150px;
+}
+.event_details dd {
+    flex: 1;
+}
+.event_requirements, .event_looking_for {
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.event_looking-for h3 {
+    margin-top: 0;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/personal_profile.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/floating_box.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/updates-page.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/table.css">
+  <script src="/javascripts/sub_nav.js"></script>
+  <script src="/javascripts/floating_box.js"></script>
+  <script src="/javascripts/user_profile.js"></script>
+  <script src="/javascripts/login.js"></script>
+  <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="/" id="web_title">VolunTeer</a>
+    <a href="javascript:void(0);" onclick="logout()">Logout</a>
+  </nav>
+  <nav class="sub_nav" id="sub_nav">
+    <a href="javascript:void(0);" class="selected" onclick="active('user_details'), get_user_info()" title="user_details">Details</a>
+    <a href="javascript:void(0);" class="not_selected" onclick="active('enrolled_events'), get_user_upcoming_enrolled_events(); get_user_past_enrolled_events();" title="enrolled_events">Enrolled Events</a>
+    <a href="javascript:void(0);" class="not_selected" onclick="active('joined_organisations'), get_user_joined_organisations()" title="joined_organisations">Joined Organisations</a>
+    <a href="javascript:void(0);" class="not_selected" onclick="active('user_updates'), get_user_updates()" title="user_updates">Updates</a>
+  </nav>
+
+  <div class="box">
+        <div class="box_item" id="container">
+
+          <div id="user_details" class="active">
+            <div id="profile_info" style="padding: 1rem;">
+              <h2>Personal Profile <i class="fa-solid fa-circle-info"></i></h2>
+              <label for="firstname">First name:</label>
+              <input type="text" id="user_firstname" name="firstname" required>
+
+              <label for="lastname">Last name:</label>
+              <input type="text" id="user_lastname" name="lastname" required>
+
+              <label for="phone">Phone:</label>
+              <input type="tel" id="user_phone" name="phone" required>
+
+              <label for="skills">Skills:</label>
+              <textarea id="user_skills" name="skills"></textarea>
+
+              <label for="experience">Experience:</label>
+              <textarea id="user_experience" name="experience"></textarea>
+              <br>
+            </div>
+          </div>
+
+          <div id="enrolled_events" class="deactive">
+            <h4>Upcoming Events:</h4>
+            <div id="upcoming_events"></div>
+
+            <h4>Past Events:</h4>
+            <div id="past_events"></div>
+          </div>
+
+          <div id="joined_organisations" class="deactive"></div>
+
+          <div id="user_updates" class="deactive">
+            <h1><i class="fa-solid fa-bell"></i> Recent Updates</h1>
+            <div id="updates"></div>
+          </div>
+        </div>
+  </div>
+  <div class="floating">
+    <div class="panel" id="shifts_panel">
+      <h2 class="member_table_name">Upcoming Shifts:</h2>
+      <div id="upcoming_shifts"></div>
+
+      <h2 class="member_table_name">Past Shifts:</h2>
+      <div id="past_shifts"></div>
+    <button type="button" class="closeBtn" onclick="close_panel('shifts_panel')">Close</button>
+
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+</body>
+</html>

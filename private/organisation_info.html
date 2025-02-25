@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisation Preview</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/search_bar.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/breadcrumb.css">
+    <script src="/javascripts/nav_bar.js" defer></script>
+    <script src="/javascripts/organisation_page.js" defer></script>
+    <script src="/javascripts/login.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav_bar"></nav>
+
+    <div aria-label="breadcrumb" class="breadcrumb-nav" style="margin-left: 1%;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/organisation_list">Organisations</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="current_breadcrumb"></li>
+        </ol>
+    </div>
+
+    <div class="box" id="box_organisation">
+        <div class="box_item" id="box_item_join">
+            <main class="content">
+                <button type="button" class="leave_button" style="display: none;" onclick="leaveOrganisation()">Leave</button>
+                <div id = "org_info">
+                    <h2 class="org_name"></h2>
+                    <h4>Location</h4>
+                    <p class="org_location"></p>
+                    <h4>Type of service</h4>
+                    <ul class="org_services"></ul>
+                    <h4>About us</h4>
+                    <p class="org_description"></p>
+                    <h4>Contact</h4>
+                    <i class="org_contact"></i>
+                </div>
+                <br>
+                <div id="events_list" class="org_events" style="display: none;"></div>
+                <button type="button" id="join_button">Join</button>
+            </main>
+        </div>
+
+        <div class="box_item" id="box_item_updates">
+            <div id="right-side-board">
+                <h2 class="updates_header"><a id="organisation_updates"><span tabindex="-1">Organisation Updates</span></a></h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

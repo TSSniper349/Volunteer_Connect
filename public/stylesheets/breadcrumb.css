@@ -1,0 +1,39 @@
+.breadcrumb-nav {
+    margin-top: 2rem;
+    font-size: medium;
+}
+
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item {
+    margin-right: 0.5em;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.breadcrumb-item>a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item::after {
+    content: '/';
+    margin-left: 0.5em;
+}
+
+.breadcrumb-item:last-child::after {
+    content: none;
+}

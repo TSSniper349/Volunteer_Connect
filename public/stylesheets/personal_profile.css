@@ -1,0 +1,44 @@
+.sub_nav{
+    margin-top: 5rem;
+    text-align: center;
+    width: fit-content;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.sub_nav a{
+    display: inline-block;
+    float: none;
+    font-weight: 200;
+    font-size:x-large;
+}
+
+a.selected{
+    background-color: #E5E4E2;
+}
+
+.deactive{
+    display: none;
+}
+
+.profile-info {
+    overflow: hidden;
+}
+
+#details_form {
+    display: inline-block;
+    width: 85%;
+}
+
+.content {
+    margin: 3%;
+}
+
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+    .sub_nav a{
+        width: 100%;
+    }
+}  

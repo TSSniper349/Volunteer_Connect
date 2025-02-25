@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/application-form.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+  <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+  <script src="/javascripts/submit_application.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="/" id="web_title">VolunTeer</a>
+  </nav>
+
+  <div class="box">
+    <div class="box_item">
+    <h2>Application Form</h2>
+
+      <label for="organisation_question">Why do you want to work at our organization?</label>
+      <textarea id="organisation_question" name="organisation_question" placeholder="Write your answer here" required></textarea>
+      <br><br>
+      <label for="updatesCheckbox" style="color: gray;"><input type="checkbox" name="updatesCheckbox" id="updatesCheckbox"> By checking this box, you consent to receive update emails from this organization upon membership approval (optional).</label>
+      <label for="eventsCheckbox" style="color: gray;"><input type="checkbox" name="eventsCheckbox" id="eventsCheckbox"> By checking this box, you consent to receive emails about new events from this organization upon membership approval (optional).</label>
+
+      <button type="button" style="margin-top: 1rem;" onclick="submit_application()">Submit Application</button>
+    </div>
+  </div>
+</body>
+</html>

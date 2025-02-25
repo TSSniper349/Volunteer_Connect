@@ -1,0 +1,54 @@
+.menu {
+  float: left;
+  width: 25%;
+  border-right: 1px solid black;
+  height: 700px;
+}
+
+.content {
+  width: 70%;
+  float: right;
+}
+
+.content ul{
+  padding: 0;
+}
+
+.form-title-pos {
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+}
+
+.menu li:hover {
+  background-color: #E5E4E2;
+}
+
+.item{
+  list-style-type: none;
+}
+.selected{
+  background-color: #E5E4E2;
+}
+
+.form-btn{
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+li .selected{
+  background-color: #E5E4E2;
+}
+
+.deactive{
+  display: none;
+}

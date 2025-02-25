@@ -1,0 +1,28 @@
+.grid{
+    margin-top: 0.3rem;
+    text-align: center;
+}
+
+.grid_item{
+    margin: 2%;
+    width: 35%;
+    height: 700px;
+    display: inline-block;
+    border-radius: 0.4rem;
+    background-color: white;
+    box-shadow: 2px 2px 7px gray;
+    overflow: hidden;
+}
+
+.grid_item img{
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-width: 100%;
+    max-height: 60%;
+}
+.grid_item div{
+    text-align: center;
+    padding: 2%;
+    font-weight: 400;
+    font-size: x-large;
+}

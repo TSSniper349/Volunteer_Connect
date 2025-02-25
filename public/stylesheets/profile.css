@@ -1,0 +1,85 @@
+.profile_info {
+  overflow: hidden;
+}
+
+label {
+  display: block;
+  margin-bottom: 1%;
+}
+input {
+  margin-bottom: 1%;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+#address {
+  width: 95%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-size: 15px;
+}
+textarea {
+  width: 95%;
+  height: 10em;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  resize: vertical;
+  margin-bottom: 1%;
+  font-size: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.shift {
+  height: fit-content;
+  border: 1px black solid;
+  border-radius: 2rem;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.shift_position {
+  font-weight: bold;
+}
+
+.shift_date , .shift_time {
+  font-style: italic;
+  margin-right: 2%;
+  float: right;
+}
+.shift_description {
+  margin-top: 10px;
+}
+.shift_responsibilities {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.organisation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.organisation img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+.organisation_details {
+  flex: 1;
+}
+.organisation_name {
+  font-weight: bold;
+}

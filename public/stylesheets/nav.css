@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    background-color: white;
+    overflow: hidden;
+    height: fit-content;
+    box-shadow: 2px 2px 7px gray;
+    width: 100%;
+}
+
+#web_title{
+    float: left;
+    font-style: italic;
+    color: #C04000;
+    font-weight: 900;
+}
+#web_title:hover{
+    background: none;
+}
+
+nav a{
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover{
+    background-color: #E5E4E2;
+}

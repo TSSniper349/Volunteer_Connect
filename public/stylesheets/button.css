@@ -1,0 +1,45 @@
+button, .submit{
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 0.6rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    outline: transparent;
+    padding: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+
+  button>a{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+  }
+  
+  button:not([disabled]):focus {
+    box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.5), -.12rem -.12rem 0.9rem rgba(239, 71, 101, 0.5), .12rem .12rem 0.9rem rgba(255, 154, 90, 0.5);
+  }
+  button:not([disabled]):hover {
+    box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.5), -.12rem -.12rem 0.9rem rgba(239, 71, 101, 0.5), .12rem .12rem 0.9rem rgba(255, 154, 90, 0.5);
+  }
+
+.leave_button{
+    float: right;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; 
+  border-radius: 5rem;
+  padding: 1rem;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteering Event Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/volunteering-event-page.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/floating_box.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/event-description.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/breadcrumb.css">
+    <script src="/javascripts/floating_box.js"></script>
+    <script src="/javascripts/nav_bar.js"></script>
+    <script src="/javascripts/get_event_info.js" defer></script>
+    <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav id="nav_bar"></nav>
+
+    <div aria-label="breadcrumb" class="breadcrumb-nav" style="margin-left: 6%;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/organisation_list">Organisations</a></li>
+          <li class="breadcrumb-item"><a id="org_breadcrumb"></a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="current_breadcrumb"></li>
+        </ol>
+    </div>
+
+    <div class="box">
+        <div class="box_item" id="event_info">
+
+        </div>
+    </div>
+
+    <div class="floating">
+        <div class="panel" id="event_application">
+            <div class="column menu">
+                <span style="color: gray; float: left; cursor: pointer; margin-bottom: 0.5rem;" onclick="close_panel('event_application')"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+                <h2 class="form-title-pos"><i class="fa-regular fa-calendar"></i> Shifts</h2>
+                <ul class="form-menu" id="form-menu"></ul>
+            </div>
+
+              <div id="container" class="column content"></div>
+        </div>
+    </div>
+      <div class="overlay" id="overlay"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Information Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/updates-page.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/breadcrumb.css">
+    <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+    <script src="/javascripts/nav_bar.js" defer></script>
+    <script src="/javascripts/update_page_info.js" defer></script>
+    <script src="/javascripts/login.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="nav_bar"></nav>
+
+    <div aria-label="breadcrumb" class="breadcrumb-nav" style="margin-left: 6%;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/updates/all_update">Updates</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="current_breadcrumb"></li>
+        </ol>
+    </div>
+
+    <div class="box">
+        <div class="box_item">
+            <div id="update_info">
+                <h1 id="announcement-title"></h1>
+                <a style="color: gray; font-size: larger; font-weight: bold; text-decoration: underline; cursor: pointer;" id="author"></a>
+                <p class="update_date"></p>
+                <hr>
+                <h4>Description</h4>
+                <p class="update_description"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

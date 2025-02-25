@@ -1,0 +1,177 @@
+.box {
+    margin: 1% 5% 1% 5%;
+    padding: 1%;
+    text-align:justify;
+}
+
+#box_organisation{
+    margin: 0;
+}
+
+.location {
+    font-style: italic;
+}
+
+.box_item {
+    width: 98%;
+    height: fit-content;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 1px 1px 5px grey;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.content{
+    margin: 2%;
+}
+
+.location {
+    font-style: italic;
+}
+
+.inline li {
+    color: red;
+}
+
+.inline li p{
+    color: black;
+}
+
+
+#box_item_description{
+    text-align: left;
+    width: 80%;
+}
+
+#box_item_description p{
+    font-weight: 600;
+    margin: 3%;
+}
+
+#box_item_updates{
+    float: right;
+    width: 25%;
+}
+
+#box_item_join{
+    text-align: left;
+    width: 70%;
+    height: fit-content;
+    border-radius: 0.4rem;
+}
+
+@media only screen and (max-width: 1310px) {
+    #box_item_updates{
+        float: none;
+        width: 97%;
+    }
+    #box_item_join{
+        width: 97%;
+    }
+} 
+
+#organisation_updates{
+    color: red;
+    width: fit-content;
+}
+
+.inner_box {
+    width: 100%;
+    height: fit-content;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 1px 1px 7px grey;
+    overflow: hidden;
+}
+
+#right-side-board{
+    display: block;
+    position: relative;
+}
+
+.content_secondary{
+    width: 220px;
+    padding: 0 24px 0 24px;
+    box-sizing: border-box;
+    min-width: 1px;
+}
+
+.right-side{
+    position: relative;
+    z-index: 10;
+    min-height: 20px;
+    unicode-bidi: isolate;
+}
+
+.updates_header{
+    margin-top: 1.06rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #c7cdd1;
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+
+.organisation_updates{
+    line-height: 1.1;
+}
+
+.organisation_updates ul{
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: visible;
+    display: block;
+    overscroll-behavior: auto;
+    padding-inline: 0px;
+    list-style-type: none;
+    margin: 0 0 6 25px;
+}
+
+.organisation_updates li{
+    list-style-type: none;
+}
+
+.updates_info{
+    margin: 4px 0 3px 0;
+}
+
+.time{
+    margin: 0px;
+    padding: 0px;
+}
+
+.time span{
+    margin-inline: 0.5rem;
+}
+
+.shift_box {
+    width:97%;
+    height: fit-content;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#shift_date,
+#shift_time,
+#shift_people {
+    flex: 1;
+    font-size: medium;
+}
+#shift_date {
+    text-align: left;
+}
+#shift_time {
+    text-align: center;
+}
+#shift_people {
+    text-align: right;
+}
+
+

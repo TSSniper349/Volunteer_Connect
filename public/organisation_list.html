@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisation List</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/org_list.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/nav.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/button.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/box.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/breadcrumb.css">
+    <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+    <script src="javascripts/nav_bar.js" defer></script>
+    <script src="javascripts/login.js"></script>
+    <script src="javascripts/organisation_list.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="nav_bar"></nav>
+
+    <div aria-label="breadcrumb" class="breadcrumb-nav" style="margin-left: 6%;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Organisations</li>
+        </ol>
+    </div>
+
+    <button type="button" onclick="topFunction()" id="topBtn" title="Go to top"><i class="fa-solid fa-caret-up fa-2x"></i></button>
+    <script src="javascripts/ReturnToTop.js"></script>
+
+    <div class="box" id="box_search">
+        <form class="box_item">
+            <div class="searching">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Search for Organisation</h3>
+                <div class="find">
+                <label for="">Keyword</label>
+                <input class="keyword" type="text" name="keywords" id="keywords" placeholder="Name or Description"> <br>
+                </div>
+                <label for="">Location</label>
+                <input class="keyword" type="text" name="location" id="location" placeholder="Address">
+            </div>
+            <div class="searching">
+                <label for="services"><b>Types of Service</b></label>
+                <br>
+                <select name="services" id="servicesList">
+                </select>
+            </div>
+            <br><br>
+            <button type="button" value="Search" onclick="search_organisation_list(event)">Search</button>
+        </form>
+    </div>
+
+    <div class="box" id="item_list">
+        <div class="box_item" id="organisation_list">
+        </div>
+    </div>
+
+</body>
+</html>

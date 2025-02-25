@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>VolunTeer</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/personal_profile.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/application-form.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/floating_box.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/table.css">
+        <script src="/javascripts/sub_nav.js"></script>
+        <script src="/javascripts/floating_box.js"></script>
+        <script src="/javascripts/manager_profile.js" defer></script>
+        <script src="/javascripts/login.js" defer></script>
+        <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body id="body">
+        <nav id="nav_bar">
+            <a href="/" id="web_title">VolunTeer</a>
+            <a href="javascript:void(0);" onclick="logout()">Logout</a>
+        </nav>
+        <nav class="sub_nav" id="sub_nav">
+            <a href="javascript:void(0);" class="selected" onclick="active('organisation_details'); get_organisation_info()" title="organisation_details">Details</a>
+            <a href="javascript:void(0);" class="not_selected" onclick="active('manage_events'); get_organisation_upcoming_events(); get_organisation_past_events()" title="manage_events">Manage Events</a>
+            <a href="javascript:void(0);" onclick="active('view_members'); get_current_members(); get_pending_applications()" title="view_members">View members</a>
+            <a href="javascript:void(0);" onclick="active('updates'); get_organisation_updates()" title="updates">Post update</a>
+        </nav>
+
+        <div class="box">
+            <div class="box_item" id="container">
+
+                <div id="organisation_details" class="active">
+                    <h2>Organization details <i class="fa-solid fa-circle-info"></i></h2>
+
+                    <label for="firstname">Manager first name:</label>
+                    <input type="text" id="org_firstname" name="firstname" required>
+                    <label for="last">Manager last name:</label>
+                    <input type="text" id="org_lastname" name="lastname" required>
+                    <label for="name">Organisation Name:</label>
+                    <input type="text" id="org_name" name="name" required>
+                    <label for="phone">Contact Phone:</label>
+                    <input type="number" id="org_phone" name="phone" required>
+
+                    <label for="address">Address Number:</label>
+                    <input type="number" id="org_address_number" name="address_number" required>
+                    <label for="address">Street:</label>
+                    <input type="text" id="org_address_street" name="address_street" required>
+                    <label for="address">City:</label>
+                    <input type="text" id="org_address_city" name="address_city" required>
+                    <label for="address">State:</label>
+                    <input type="text" id="org_address_state" name="address_state" required>
+                    <label for="address">Postcode:</label>
+                    <input type="number" id="org_address_postcode" name="address_postcode" required>
+
+                    <label for="description">Organisation Description:</label>
+                    <textarea id="org_description" name="description"></textarea>
+
+                    <label>Type of service:</label>
+                    <div class="checkbox-container" id="servicesList">
+                        <label for="service1"><input type="checkbox" id="service1">Animal Welfare</label>
+                    </div>
+
+                </div>
+
+                <div id="manage_events" class="deactive">
+                    <button type="button" onclick="open_panel('events_panel')" style="width: 100%;">Add new Event</button>
+                    <h4>Upcoming Events</h4>
+                    <div id="upcoming_events"></div>
+                    <h4>Past Events</h4>
+                    <div id="past_events"></div>
+                </div>
+
+                <div id="view_members" class="deactive">
+                    <div id="current_members">
+                        <h2 class="member_table_name">Current Members:</h2>
+                        <h3 id="current_members_count" style="float: right; color: gray;"> </h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Joined Date</th>
+                                    <th>Number of shifts completed</th>
+                                </tr>
+                            </thead>
+                            <tbody id="current_members_data"></tbody>
+                        </table>
+                    </div>
+
+                    <div id="pending_applications">
+                        <h2 class="member_table_name">Pending Applications:</h2>
+                        <h3 id="pending_applications_count" style="float: right; color: gray;"> </h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Apply Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pending_applications_data"></tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+
+                <div id="updates" class="deactive">
+                    <button type="button" onclick="open_panel('updates_panel')" style="width: 100%;">New Update</button>
+                    <h1><i class="fa-solid fa-bell"></i> Recent Updates</h1>
+                    <div id="updates_list"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="shifts_panel">
+                <span style="color: gray; float: right; cursor: pointer; margin-bottom: 0.5rem;" onclick="close_panel('shifts_panel')"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+
+                <h2 class="member_table_name">Upcoming Shifts:</h2>
+                <h3 id="upcoming_shifts_count" style="float: right; color: gray;"> </h3>
+                <div id="upcoming_shifts"></div>
+
+                <h2 class="member_table_name">Past Shifts:</h2>
+                <h3 id="past_shifts_count" style="float: right; color: gray;"> </h3>
+                <div id="past_shifts">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="shift_panel">
+
+            </div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="events_panel">
+                <label for="title">Event Title:</label>
+                <input type="text" id="event_title" name="title" placeholder="Event Title" required>
+
+                <label for="start_date">Start date:</label>
+                <input type="date" class="dateInput" id="event_start_date" name="start_date" required>
+
+                <label for="end_date">End date:</label>
+                <input type="date" class="dateInput" id="event_end_date" name="end_date" required>
+                <br>
+                <label for="location_number">Address Number:</label>
+                <input type="number" id="event_location_number" name="location_number" placeholder="Enter the address number" required>
+                <label for="location_street">Street:</label>
+                <input type="text" id="event_location_street" name="location_street" placeholder="Enter the street" required>
+                <label for="location_city">City:</label>
+                <input type="text" id="event_location_city" name="location_city" placeholder="Enter the city" required>
+                <label for="location_state">State:</label>
+                <input type="text" id="event_location_state" name="location_state" placeholder="Enter the state" required>
+                <label for="location_postcode">Postcode:</label>
+                <input type="number" id="event_location_postcode" name="location_postcode" placeholder="Enter the postcode" required>
+
+                <label for="description">Description:</label>
+                <textarea id="event_description" name="description" placeholder="Describe your event" required></textarea>
+
+                <label>Shifts:</label>
+                <div id="shift_list"></div>
+                <i class="fa-solid fa-plus" onclick="addEventShift('shift_list')" style="cursor: pointer;"></i>
+
+                <button type="button" class="saveChangesBtn" onclick="addNewEvents()">Save</button>
+                <button type="button" class="closeBtn" onclick="close_panel('events_panel')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="modifying_events_panel"></div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="member_panel"></div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="candidate_panel"></div>
+        </div>
+
+        <div class="floating">
+            <div class="panel" id="updates_panel">
+                    <label for="update_title">Update's Title</label>
+                    <input type="text" id="update_title" required><br>
+
+                    <label for="update_description">Description:</label>
+                    <textarea id="update_description" placeholder="Describe your update" required></textarea><br>
+
+                    <label for="status">Status:</label>
+                    <div class="checkbox-container">
+                        <label><input type="radio" checked="checked" name="status" id="Public">Public</label>
+                        <label><input type="radio" name="status" id="Private">Private</label>
+                    </div>
+                    <button class="saveChangesBtn" type="button" onclick="addNewUpdates();">Save</button>
+                    <button type="button" class="closeBtn" onclick="close_panel('updates_panel')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+    </body>
+</html>

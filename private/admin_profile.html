@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding admins</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/personal_profile.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/box.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/floating_box.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/table.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/password_field.css">
+  <script src="/javascripts/floating_box.js" defer></script>
+  <script src="/javascripts/sub_nav.js" defer></script>
+  <script src="/javascripts/admin_profile.js" defer></script>
+  <script src="/javascripts/login.js"></script>
+  <script src="/javascripts/showPassword.js"></script>
+  <script src="https://kit.fontawesome.com/e70351a5df.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="/" id="web_title">VolunTeer</a>
+    <a href="javascript:void(0);" onclick="logout()">Logout</a>
+  </nav>
+  <nav class="sub_nav" id="sub_nav">
+    <a href="javascript:void(0);" class="selected" onclick="active('admin_details'); get_admin_info()" title="admin_details">Details</a>
+    <a href="javascript:void(0);" class="not_selected" onclick="active('manage_users'); get_users()" title="manage_users">Manage Users</a>
+    <a href="javascript:void(0);" onclick="active('manage_organisations'); get_organisations()" title="manage_organisations">Manage Organisation</a>
+    <a href="javascript:void(0);" onclick="active('add_new_admins'); get_admin_board()" title="add_new_admins">Admin Board</a>
+  </nav>
+
+  <div class="box">
+    <div class="box_item" id="container">
+
+      <div id="admin_details" class="active">
+        <h2> Admin Profiles</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="admin_name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="admin_email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="number" id="admin_phone" name="phone" required>
+        <br>
+        <button type="button" onclick="saveAdminInfoChanges()">Save Changes</button>
+      </div>
+
+      <div id="manage_users" class="deactive">
+        <h2 style="display: inline-block;">Users:</h2>
+        <h3 id="user-count" style="float: right; color: gray;"></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="user_data"></tbody>
+        </table>
+      </div>
+
+      <div id="manage_organisations" class="deactive">
+        <h2 style="display: inline-block;">Organisations:</h2>
+        <h3 id="organisation-count" style="float: right; color: gray;"></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ABN</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="organisation_data"></tbody>
+        </table>
+      </div>
+
+      <div id="add_new_admins" class="deactive">
+        <button type="button" onclick="open_panel('admin_panel')" style="width: 100%;">Create new Admin account</button>
+
+        <div id="admin_board">
+          <h2 class="member_table_name">Admin List:</h2>
+          <h3 id="current_members_count" style="float: right; color: gray;"> </h3>
+          <table>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+            </tr>
+            </thead>
+            <tbody id="current_admin_board"></tbody>
+          </table>
+        </div>
+
+        <br>
+
+        <div class="floating">
+          <div class="panel" id="admin_panel">
+            <h2>Add a new admin:</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="new_name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="new_email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="number" id="new_phone" name="phone" required>
+
+            <label for="password">Password:</label>
+            <div class="password-wrapper">
+              <input type="password" id="new_password" name="password" required><br>
+              <i style="margin-right: 2%;" id="toggle-password" class="fa fa-eye" aria-hidden="true" onclick="showPassword('new_password')"></i>
+            </div>
+
+            <button class="saveChangesBtn" type="submit" onclick="addNewAdmins(); ">Add New</button>
+            <button type="button" class="closeBtn" onclick="close_panel('admin_panel')">Cancel</button>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+</body>
+</html>
