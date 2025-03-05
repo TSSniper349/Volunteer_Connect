@@ -106,8 +106,8 @@ Take a visual tour of Volunteer Connect through these screenshots:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/volunteer-connect.git
-    cd volunteer-connect
+    git clone https://github.com/TSSniper349/Volunteer_Connect.git
+    cd Volunteer_Connect
     ```
 
 2. **Install dependencies:**
